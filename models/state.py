@@ -21,7 +21,6 @@ class State(BaseModel, Base):
     else:
         @property
         def cities(self):
-            """Getter attribute cities"""
             city_instances = []
             all_cities = models.storage.all(City)
             for city in all_cities.values():
